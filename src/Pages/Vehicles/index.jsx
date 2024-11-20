@@ -16,7 +16,7 @@ const VehiclesList = () => {
             .get(`${baseURL}/api/vehicle/getAllVehicle`, {
                 headers: {
                     "Content-Type": "application/json",
-                    authorization: sessionStorage.getItem("token")
+                    authorization: localStorage.getItem("token")
                 }
             })
             .then((response) => {

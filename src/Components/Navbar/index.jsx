@@ -4,11 +4,11 @@ export default function Navbar() {
     const navigation = useNavigate();
 
     const logout = () => {
-        const token = sessionStorage.getItem("token");
+        const token = localStorage.getItem("token");
         console.log(token);
         if (token) {
-            sessionStorage.removeItem(token);
-            sessionStorage.clear();
+            localStorage.removeItem(token);
+            localStorage.clear();
             navigation("/login");
         }
         navigation("/login");

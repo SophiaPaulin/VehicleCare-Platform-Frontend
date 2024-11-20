@@ -14,7 +14,7 @@ export const useAuthContext = () => useContext(AuthContext);
 
 export default function AuthContextProvider({ children }) {
   const { decodedToken, isExpired } = useJwt(
-    sessionStorage.getItem("token") || ""
+    localStorage.getItem("token") || ""
   );
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);

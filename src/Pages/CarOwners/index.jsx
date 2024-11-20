@@ -16,7 +16,7 @@ const CarOwnerList = () => {
             .get(`${baseURL}/api/owner/getAllOwner`, {
                 headers: {
                     "Content-Type": "application/json",
-                    authorization: sessionStorage.getItem("token")
+                    authorization: localStorage.getItem("token")
                 }
             })
             .then((response) => {

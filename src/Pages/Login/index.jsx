@@ -34,8 +34,8 @@ export default function Login() {
                 )
                 .then((response) => {
                     if (response.data?.success && response.data?.token) {
-                        sessionStorage.setItem("token", response.data?.token);
-                        sessionStorage.setItem("userId", response.data?.userId);
+                        localStorage.setItem("token", response.data?.token);
+                        localStorage.setItem("userId", response.data?.userId);
                         setIsLoggedIn(true);
                         navigator("/dashboard/appointments");
                     } else {

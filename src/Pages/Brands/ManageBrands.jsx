@@ -14,7 +14,7 @@ export default function ManageBrands() {
             axios.get(`${baseURL}/api/brands/getAllBrands`, {
                 headers: {
                     "Content-Type": "application/json",
-                    authorization: sessionStorage.getItem("token"),
+                    authorization: localStorage.getItem("token"),
                 }
             })
             .then((response) => {

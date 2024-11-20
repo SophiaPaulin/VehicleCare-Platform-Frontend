@@ -11,7 +11,7 @@ export default function ManageProducts() {
             .get(`${baseURL}/api/products/getAllProducts`, {
                 headers: {
                     "Content-Type": "application/json",
-                    authorization: sessionStorage.getItem("token")
+                    authorization: localStorage.getItem("token")
                 }
             })
             .then((response) => {

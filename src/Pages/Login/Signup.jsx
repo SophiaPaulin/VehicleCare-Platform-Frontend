@@ -40,7 +40,7 @@ export default function SignUp() {
             )
             .then((response) => {
                 if (response.data?.success) {
-                    // sessionStorage.setItem("userId", response.data?.userId);
+                    // localStorage.setItem("userId", response.data?.userId);
                     showToast("Register Success", "success");
                     navigate("/login");
                 } else {

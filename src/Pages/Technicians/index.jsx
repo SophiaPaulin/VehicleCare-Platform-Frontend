@@ -16,7 +16,7 @@ const TechnicianList = () => {
             .get(`${baseURL}/api/technician/getAllTechnician`, {
                 headers: {
                     "Content-Type": "application/json",
-                    authorization: sessionStorage.getItem("token")
+                    authorization: localStorage.getItem("token")
                 }
             })
             .then((response) => {

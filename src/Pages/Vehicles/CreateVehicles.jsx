@@ -29,7 +29,7 @@ const CreateVehicles = () => {
             .get(`${baseURL}/api/owner/getAllOwner`, {
                 headers: {
                     "Content-Type": "application/json",
-                    authorization: sessionStorage.getItem("token")
+                    authorization: localStorage.getItem("token")
                 }
             })
             .then((response) => {
@@ -56,7 +56,7 @@ const CreateVehicles = () => {
                 .post(`${baseURL}/api/vehicle/create`, values, {
                     headers: {
                         "Content-Type": "application/json",
-                        authorization: sessionStorage.getItem("token")
+                        authorization: localStorage.getItem("token")
                     }
                 })
                 .then((response) => {

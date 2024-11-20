@@ -11,7 +11,7 @@ export default function ManageOrders() {
             .get(`${baseURL}/api/orders/getAllOrders`, {
                 headers: {
                     "Content-Type": "application/json",
-                    authorization: sessionStorage.getItem("token")
+                    authorization: localStorage.getItem("token")
                 }
             })
             .then((response) => {

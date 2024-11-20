@@ -16,7 +16,7 @@ const ServiceTypeList = () => {
             .get(`${baseURL}/api/serviceType/getAllServiceType`, {
                 headers: {
                     "Content-Type": "application/json",
-                    authorization: sessionStorage.getItem("token")
+                    authorization: localStorage.getItem("token")
                 }
             })
             .then((response) => {

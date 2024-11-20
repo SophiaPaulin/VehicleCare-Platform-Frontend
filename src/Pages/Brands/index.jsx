@@ -43,7 +43,7 @@ export default function CreateBrand() {
               axios.post(`${baseURL}/api/brands/create`,values, {
                 headers: {
                   "Content-Type": "application/json",
-                  authorization: sessionStorage.getItem("token"),
+                  authorization: localStorage.getItem("token"),
                 },
               })
                 .then((response) => {

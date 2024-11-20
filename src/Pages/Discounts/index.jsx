@@ -44,7 +44,7 @@ export default function Discounts() {
                 body: JSON.stringify(values),
                 headers: {
                   "Content-Type": "application/json",
-                  token: sessionStorage.getItem("_tk"),
+                  token: localStorage.getItem("_tk"),
                 },
               })
                 .then((response) => {
