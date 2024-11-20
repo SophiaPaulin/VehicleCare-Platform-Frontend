@@ -34,7 +34,7 @@ const AppointmentList = () => {
 
     return (
         <>
-            <h3>Technician Lists</h3>
+            <h3>Appointment Lists</h3>
             <div className="card p-3">
                 <table className="table table-bordered">
                     <thead>
