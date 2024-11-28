@@ -37,7 +37,7 @@ export default function Login() {
                         localStorage.setItem("token", response.data?.token);
                         localStorage.setItem("userId", response.data?.userId);
                         setIsLoggedIn(true);
-                        navigator("/dashboard/appointments");
+                        navigator("/dashboard");
                     } else {
                         showToast(response.data.message, "error");
                     }

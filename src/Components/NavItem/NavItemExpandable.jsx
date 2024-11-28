@@ -27,6 +27,7 @@ export default function NavItemExpandable({
   }
 
   return (
+    <>
     <li className="nav-item" ref={navItemRef} onClick={handleNavItemToggle}>
       <a
         className={"nav-link collapsed"}
@@ -40,6 +41,7 @@ export default function NavItemExpandable({
       </a>
       <div id={id} className={"collapse"}>
         <div className="bg-white py-2 collapse-inner rounded">
+        
           {routes.map((route, index) => (
             <Link
               className="collapse-item"
@@ -52,6 +54,7 @@ export default function NavItemExpandable({
         </div>
       </div>
     </li>
+    </>
   );
 }
 

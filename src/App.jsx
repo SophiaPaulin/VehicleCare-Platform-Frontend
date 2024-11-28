@@ -28,13 +28,14 @@ import VehiclesList from "./Pages/Vehicles";
 import CreateVehicles from "./Pages/Vehicles/CreateVehicles";
 import AppointmentList from "./Pages/Appointments";
 import BookAppointment from "./Pages/Appointments/BookAppointment";
+import Dashboard from "./Pages/Dashboard";
 
 export const mycontext = createContext(true);
 
 function App() {
     const { isLoggedIn } = useAuthContext();
-    // const baseURL = "http://localhost:9002";
-     const baseURL="https://vehiclecare-platform-backend.onrender.com";
+    const baseURL = "http://localhost:9002";
+    //  const baseURL="https://vehiclecare-platform-backend.onrender.com";
     return (
         <div>
             <mycontext.Provider value={{ baseURL }}>
@@ -45,7 +46,7 @@ function App() {
                     <Route Component={SignUp} path="/register" />
                     {isLoggedIn && (
                         <Route Component={Landing} path="/dashboard">
-                            {/* <Route Component={Insights} index /> */}
+                            <Route Component={Dashboard} path="/dashboard" />
 
                             <Route Component={ServiceTypeList} path="/dashboard/service-type" />
                             <Route

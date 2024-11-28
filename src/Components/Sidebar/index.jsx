@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import Icons from "../../Assets/icons";
 import NavItemExpandable from "../NavItem/NavItemExpandable";
 import { useAuthContext } from "../../Context/AuthContext";
@@ -156,6 +157,15 @@ export default function Sidebar() {
             </div>
 
             <hr className="sidebar-divider" />
+
+
+            <Link
+                className="collapse-item"
+                to={"/dashboard"}
+                key="Dashboard"
+            >
+                Dashboard
+            </Link>
 
             <NavItemExpandable
                 id="serviceTypes"

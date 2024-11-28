@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { useContext, useEffect, useState } from "react";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
 import { mycontext } from "../../App";
@@ -23,7 +23,7 @@ const AppointmentList = () => {
             .get(`${baseURL}/api/appointment/getAllAppointment`, {
                 headers: {
                     "Content-Type": "application/json",
-                    // authorization: localStorage.getItem("token")
+                    authorization: localStorage.getItem("token")
                 }
             })
             .then((response) => {
